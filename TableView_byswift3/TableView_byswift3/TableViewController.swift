@@ -11,16 +11,25 @@ import UIKit
 class TableViewController: UITableViewController {
 
     let identifier = "cell"
-    var i_selectedRow:Int = 0
+    var i_selectedRow:Int = 0,i_rows=15
+    var refreshcontroller:UIRefreshControl = UIRefreshControl()
+    let lb_hint:UILabel=UILabel(frame: CGRect(x:100, y:0, width:200, height:50))
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        refreshcontroller.addTarget(self, action: #selector(TableViewController.refreshAction), for: .valueChanged)
+        
+        self.tableView.addSubview(refreshcontroller)
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+    }
+    func refreshAction(){
+        i_rows = i_rows + 10
+        self.tableView.reloadData()
     }
 
     override func didReceiveMemoryWarning() {
@@ -37,24 +46,39 @@ class TableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 15
+        return i_rows
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath)
-
         cell.textLabel?.text = "This is Row at \(indexPath.row+1)"
         cell.detailTextLabel?.text = "This is RowDetail at \(indexPath.row+1)"
-
+        refreshcontroller.endRefreshing()
+        lb_hint.removeFromSuperview()
         return cell
     }
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         i_selectedRow = indexPath.row
+        let currentCell = tableView.cellForRow(at: indexPath)! as UITableViewCell
+        debugPrint("cell.tag=\(currentCell.tag)")
         self.performSegue(withIdentifier: "changeScreen", sender: nil)
     }
     
-
+    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if !(indexPath.row + 1 < self.i_rows) {
+            // hint for load more
+            lb_hint.text = "Load More..."
+            lb_hint.textAlignment = .center
+            cell.addSubview(lb_hint)
+            
+            cell.textLabel?.text = ""
+            cell.detailTextLabel?.text = ""
+            i_rows = i_rows + 10
+            self.tableView.reloadData()
+            cell.willRemoveSubview(lb_hint)
+        }
+    }
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
