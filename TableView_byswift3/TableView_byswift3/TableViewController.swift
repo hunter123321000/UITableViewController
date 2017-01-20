@@ -8,6 +8,11 @@
 
 import UIKit
 
+class TableViewCell:UITableViewCell{
+    
+    @IBOutlet weak var lb_title: UILabel!
+    @IBOutlet weak var lb_detail: UILabel!
+}
 class TableViewController: UITableViewController {
 
     let identifier = "cell"
@@ -51,13 +56,16 @@ class TableViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath)
-        cell.textLabel?.text = "This is Row at \(indexPath.row+1)"
-        cell.detailTextLabel?.text = "This is RowDetail at \(indexPath.row+1)"
+        let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as! TableViewCell
+//        cell.textLabel?.text = "This is Row at \(indexPath.row+1)"
+//        cell.detailTextLabel?.text = "This is RowDetail at \(indexPath.row+1)"
+        cell.lb_title.text = "This is Row at \(indexPath.row+1)"
+        cell.lb_detail.text = "This is RowDetail at \(indexPath.row+1)"
         refreshcontroller.endRefreshing()
         lb_hint.removeFromSuperview()
         return cell
     }
+    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         i_selectedRow = indexPath.row
         let currentCell = tableView.cellForRow(at: indexPath)! as UITableViewCell
@@ -66,18 +74,28 @@ class TableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        if !(indexPath.row + 1 < self.i_rows) {
-            // hint for load more
-            lb_hint.text = "Load More..."
-            lb_hint.textAlignment = .center
-            cell.addSubview(lb_hint)
-            
-            cell.textLabel?.text = ""
-            cell.detailTextLabel?.text = ""
-            i_rows = i_rows + 10
-            self.tableView.reloadData()
-            cell.willRemoveSubview(lb_hint)
+        
+        if let myCell = cell as? TableViewCell
+        {
+            if !(indexPath.row + 1 < self.i_rows) {
+                // hint for load more
+                lb_hint.text = "Load More..."
+                lb_hint.textAlignment = .center
+                myCell.addSubview(lb_hint)
+                if myCell.isDescendant(of: lb_hint){
+                    debugPrint("exist")
+                }else{
+                    debugPrint("Don't exist")
+                }
+                //            cell.textLabel?.text = ""
+                //            cell.detailTextLabel?.text = ""
+                myCell.lb_title?.text = ""
+                myCell.lb_detail?.text = ""
+                i_rows = i_rows + 10
+                self.tableView.reloadData()
+            }
         }
+        
     }
     /*
     // Override to support conditional editing of the table view.
