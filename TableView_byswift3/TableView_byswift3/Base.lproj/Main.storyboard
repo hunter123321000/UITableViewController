@@ -13,29 +13,39 @@
         <scene sceneID="AyX-an-n1r">
             <objects>
                 <tableViewController id="D5q-rY-hcy" customClass="TableViewController" customModule="TableView_byswift3" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="z8k-ZY-Ygq">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="57" sectionHeaderHeight="28" sectionFooterHeight="28" id="z8k-ZY-Ygq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="cell" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="6Hf-V8-xjw" customClass="TableViewCell" customModule="TableView_byswift3" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="cell" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="57" id="6Hf-V8-xjw" customClass="TableViewCell" customModule="TableView_byswift3" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="57"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6Hf-V8-xjw" id="dlj-fc-Abw">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zQ3-qG-Xah">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zQ3-qG-Xah" customClass="PaddingLabel" customModule="TableView_byswift3" customModuleProvider="target">
                                             <rect key="frame" x="22" y="0.0" width="42" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="1" green="0.24363238870000001" blue="0.25590652089999999" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="leftInset">
+                                                    <real key="value" value="10"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QdJ-gv-wkR">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QdJ-gv-wkR" customClass="PaddingLabel" customModule="TableView_byswift3" customModuleProvider="target">
                                             <rect key="frame" x="22" y="23" width="42" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                             <color key="textColor" red="0.43375951750000002" green="0.4255258757" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="leftInset">
+                                                    <real key="value" value="10"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
                                         </label>
                                     </subviews>
                                     <constraints>
@@ -60,7 +70,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hxZ-5S-Fqf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="212" y="240"/>
+            <point key="canvasLocation" x="212" y="239.73013493253376"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="csW-tb-YKG">
@@ -102,23 +112,35 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4H0-ZG-tTp">
+                                <rect key="frame" x="0.0" y="94" width="375" height="198"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="198" id="fsa-Rr-Mxq"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="wXl-rl-A2u" firstAttribute="top" secondItem="bnD-f9-kmw" secondAttribute="bottom" constant="34" id="1rJ-bS-7US"/>
-                            <constraint firstItem="wXl-rl-A2u" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ly4-Ou-s7l"/>
-                            <constraint firstItem="bnD-f9-kmw" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ZnJ-Ce-924"/>
-                            <constraint firstItem="bnD-f9-kmw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eyo-cu-PYK"/>
+                            <constraint firstItem="wXl-rl-A2u" firstAttribute="top" secondItem="bnD-f9-kmw" secondAttribute="bottom" constant="34" id="DXp-3p-tdI"/>
+                            <constraint firstItem="bnD-f9-kmw" firstAttribute="top" secondItem="4H0-ZG-tTp" secondAttribute="bottom" constant="31" id="LDg-ky-OE5"/>
+                            <constraint firstItem="4H0-ZG-tTp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ON0-Zw-3oV"/>
+                            <constraint firstItem="4H0-ZG-tTp" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="TpX-Q8-pRX"/>
+                            <constraint firstItem="4H0-ZG-tTp" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="30" id="Zbe-DZ-SCL"/>
+                            <constraint firstItem="bnD-f9-kmw" firstAttribute="top" secondItem="4H0-ZG-tTp" secondAttribute="bottom" constant="31" id="fMb-I2-lDL"/>
+                            <constraint firstItem="4H0-ZG-tTp" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="30" id="fe0-l4-I5d"/>
+                            <constraint firstItem="4H0-ZG-tTp" firstAttribute="centerX" secondItem="wXl-rl-A2u" secondAttribute="centerX" id="p7F-0x-AVo"/>
+                            <constraint firstItem="4H0-ZG-tTp" firstAttribute="centerX" secondItem="bnD-f9-kmw" secondAttribute="centerX" id="xQJ-EM-VIX"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="img_animal" destination="4H0-ZG-tTp" id="QgO-4Z-B4v"/>
                         <outlet property="lb_detail" destination="wXl-rl-A2u" id="EbK-2M-R9S"/>
                         <outlet property="lb_title" destination="bnD-f9-kmw" id="Nud-hG-Kig"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1044" y="240"/>
+            <point key="canvasLocation" x="1044" y="239.73013493253376"/>
         </scene>
     </scenes>
 </document>
