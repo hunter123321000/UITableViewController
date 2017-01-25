@@ -22,7 +22,6 @@ class TableViewController: UITableViewController {
     let lb_hint:UILabel=UILabel(frame: CGRect(x:100, y:0, width:200, height:50))
     let str_jsonurl="http://data.taipei/opendata/datalist/apiAccess?scope=resourceAquire&rid=a3e2b221-75e0-45c1-8f97-75acbd43d613"
     var dataArray:[AnyObject] = [AnyObject]()
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,13 +35,18 @@ class TableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         
-        Alamofire.request(str_jsonurl).responseJSON { response in
-            debugPrint("response=\(response)")
+        Alamofire.request(str_jsonurl)
+            .downloadProgress { progress in
+                print("Download Progress: \(progress.fractionCompleted)")
+                SwiftSpinner.show("Fetching data...")
+            }
+            .responseJSON { response in
+//            debugPrint("response=\(response)")
             if let json:[String: AnyObject] = response.result.value as! [String : AnyObject]? {
-                print("JSON: \(json)")
+//                print("JSON: \(json)")
                 self.dataArray = json["result"]!["results"] as! [AnyObject]!
-                
                 self.tableView.reloadData()
+                SwiftSpinner.hide()
             }
         }
         
@@ -166,9 +170,9 @@ class TableViewController: UITableViewController {
 //            vc.txt_title = "This is Row at \(i_selectedRow+1)"
 //            vc.txt_detail = "This is Detail at Row \(i_selectedRow+1)"
             
-            vc.txt_title = dataArray[i_selectedRow+1]["A_Name_Ch"] as! String
-            vc.txt_detail = dataArray[i_selectedRow+1]["A_Location"] as! String
-            vc.str_imgUrl = dataArray[i_selectedRow+1]["A_Pic01_URL"] as! String
+            vc.txt_title = dataArray[i_selectedRow]["A_Name_Ch"] as! String
+            vc.txt_detail = dataArray[i_selectedRow]["A_Location"] as! String
+            vc.str_imgUrl = dataArray[i_selectedRow]["A_Pic01_URL"] as! String
 
         }
     }

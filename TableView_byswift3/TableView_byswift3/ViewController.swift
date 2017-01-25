@@ -19,6 +19,7 @@ class ViewController: UIViewController {
         
     override func viewDidLoad() {
         super.viewDidLoad()
+        SwiftSpinner.show("Fetching Data...")
         lb_title.text = txt_title
         lb_detail.text = txt_detail
         // Do any additional setup after loading the view, typically from a nib.
@@ -35,6 +36,7 @@ class ViewController: UIViewController {
                     // Update the cell
                     DispatchQueue.main.async(execute: {
                         self.img_animal.image = image
+                        SwiftSpinner.hide()
                     })
                     
                 }

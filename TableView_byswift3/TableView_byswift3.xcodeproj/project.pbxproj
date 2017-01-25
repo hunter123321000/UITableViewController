@@ -18,6 +18,7 @@
 		47A9C5071E3081F8001539A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47A9C5061E3081F8001539A6 /* Assets.xcassets */; };
 		47A9C50A1E3081F8001539A6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47A9C5081E3081F8001539A6 /* LaunchScreen.storyboard */; };
 		47A9C5121E30829E001539A6 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A9C5111E30829E001539A6 /* TableViewController.swift */; };
+		47B6BCAD1E383623001844F8 /* SwiftSpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B6BCAC1E383623001844F8 /* SwiftSpinner.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -47,6 +48,7 @@
 		47A9C5091E3081F8001539A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		47A9C50B1E3081F8001539A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		47A9C5111E30829E001539A6 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		47B6BCAC1E383623001844F8 /* SwiftSpinner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftSpinner.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +93,7 @@
 				47A9C5081E3081F8001539A6 /* LaunchScreen.storyboard */,
 				47A9C50B1E3081F8001539A6 /* Info.plist */,
 				4756F0621E3736A300EB4D5E /* PaddingLabel.swift */,
+				47B6BCAC1E383623001844F8 /* SwiftSpinner.swift */,
 			);
 			path = TableView_byswift3;
 			sourceTree = "<group>";
@@ -169,6 +172,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47B6BCAD1E383623001844F8 /* SwiftSpinner.swift in Sources */,
 				4756F0631E3736A300EB4D5E /* PaddingLabel.swift in Sources */,
 				47A9C5021E3081F8001539A6 /* ViewController.swift in Sources */,
 				47A9C5121E30829E001539A6 /* TableViewController.swift in Sources */,
