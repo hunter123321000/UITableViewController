@@ -20,7 +20,11 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         SwiftSpinner.show("Fetching Data...")
-        lb_title.text = txt_title
+        
+        
+        
+        
+        lb_title.attributedText = convertSubStringColor(input: txt_title)
         lb_detail.text = txt_detail
         // Do any additional setup after loading the view, typically from a nib.
          print("str_imgUrl=\(str_imgUrl)")
@@ -53,6 +57,18 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+    func convertSubStringColor(input:String) -> NSMutableAttributedString {
+        let color : [UIColor] = [.green, .blue, .red, .orange]
+        let str = NSMutableAttributedString(string: input)
+        
+        for i in 0..<input.characters.count {
+            let range =  NSMakeRange(i, 1)
+            let newColor = color[i % color.count]
+            
+            str.addAttribute(NSForegroundColorAttributeName, value: newColor, range: range)
+        }
+        return str
+    }
+    
 }
 

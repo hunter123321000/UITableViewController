@@ -13,6 +13,7 @@ class TableViewCell:UITableViewCell{
     
     @IBOutlet weak var lb_title: UILabel!
     @IBOutlet weak var lb_detail: UILabel!
+    @IBOutlet weak var img_icon: UIImageView!
 }
 class TableViewController: UITableViewController {
 
@@ -87,6 +88,17 @@ class TableViewController: UITableViewController {
         
         cell.lb_title.text = dataArray[indexPath.row]["A_Name_Ch"] as? String
         cell.lb_detail.text = dataArray[indexPath.row]["A_Location"] as? String
+        let str_imgUrl = dataArray[indexPath.row]["A_Pic01_URL"] as? String
+        Alamofire.request(str_imgUrl!)
+            .responseImage { response in
+                if let image = response.result.value {
+                    DispatchQueue.main.async(execute: {
+                        cell.img_icon.image=image
+                        
+                    })
+
+                }
+        }
         
         return cell
     }

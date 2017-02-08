@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,12 +22,12 @@
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="cell" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="57" id="6Hf-V8-xjw" customClass="TableViewCell" customModule="TableView_byswift3" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="57"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6Hf-V8-xjw" id="dlj-fc-Abw">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="6Hf-V8-xjw" id="dlj-fc-Abw">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="57"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zQ3-qG-Xah" customClass="PaddingLabel" customModule="TableView_byswift3" customModuleProvider="target">
-                                            <rect key="frame" x="22" y="0.0" width="42" height="21"/>
+                                            <rect key="frame" x="111" y="5" width="42" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="1" green="0.24363238870000001" blue="0.25590652089999999" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
@@ -37,7 +38,7 @@
                                             </userDefinedRuntimeAttributes>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QdJ-gv-wkR" customClass="PaddingLabel" customModule="TableView_byswift3" customModuleProvider="target">
-                                            <rect key="frame" x="22" y="23" width="42" height="21"/>
+                                            <rect key="frame" x="111" y="28" width="42" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                             <color key="textColor" red="0.43375951750000002" green="0.4255258757" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
@@ -47,12 +48,25 @@
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                         </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" restorationIdentifier="img_icon" translatesAutoresizingMaskIntoConstraints="NO" id="jMs-6i-4Y8">
+                                            <rect key="frame" x="11" y="3" width="50" height="50"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="50" id="Ast-km-Fsc"/>
+                                                <constraint firstAttribute="width" constant="50" id="bhe-Cp-8et"/>
+                                            </constraints>
+                                        </imageView>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="QdJ-gv-wkR" firstAttribute="top" secondItem="zQ3-qG-Xah" secondAttribute="bottom" constant="2" id="1K3-b7-h8Z"/>
+                                        <constraint firstItem="zQ3-qG-Xah" firstAttribute="leading" secondItem="jMs-6i-4Y8" secondAttribute="trailing" constant="5" id="HAF-Lb-aWn"/>
+                                        <constraint firstItem="jMs-6i-4Y8" firstAttribute="leading" secondItem="dlj-fc-Abw" secondAttribute="leading" constant="20" id="PnK-4A-hCm"/>
+                                        <constraint firstItem="QdJ-gv-wkR" firstAttribute="leading" secondItem="jMs-6i-4Y8" secondAttribute="trailing" constant="5" id="arQ-zY-TBh"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="jMs-6i-4Y8" secondAttribute="bottom" constant="-1" id="beB-Ib-njs"/>
+                                        <constraint firstItem="jMs-6i-4Y8" firstAttribute="top" secondItem="dlj-fc-Abw" secondAttribute="topMargin" constant="-2" id="cif-af-nhi"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="img_icon" destination="jMs-6i-4Y8" id="L9f-rn-vcv"/>
                                     <outlet property="lb_detail" destination="QdJ-gv-wkR" id="r1A-JA-pOz"/>
                                     <outlet property="lb_title" destination="zQ3-qG-Xah" id="w3J-b9-eKp"/>
                                 </connections>
