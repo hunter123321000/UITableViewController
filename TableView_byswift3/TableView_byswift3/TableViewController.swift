@@ -99,7 +99,7 @@ class TableViewController: UITableViewController {
 
                 }
         }
-        
+        refreshcontroller.endRefreshing()
         return cell
     }
     
