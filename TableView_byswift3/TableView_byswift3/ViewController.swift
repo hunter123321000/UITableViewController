@@ -27,7 +27,7 @@ class ViewController: UIViewController {
         lb_title.attributedText = convertSubStringColor(input: txt_title)
         lb_detail.text = txt_detail
         // Do any additional setup after loading the view, typically from a nib.
-         print("str_imgUrl=\(str_imgUrl)")
+         print("str_imgUrl=\(str_imgUrl) \n lb_title=\(lb_title.attributedText) \n lb_detail=\(lb_detail)")
 
         Alamofire.request(str_imgUrl)
             .responseImage { response in

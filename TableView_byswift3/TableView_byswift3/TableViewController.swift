@@ -106,8 +106,11 @@ class TableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         i_selectedRow = indexPath.row
         let currentCell = tableView.cellForRow(at: indexPath)! as UITableViewCell
-        debugPrint("cell.tag=\(currentCell.tag)")
-        self.performSegue(withIdentifier: "changeScreen", sender: nil)
+        debugPrint("cell.tag=\(currentCell.tag) \n i_selectedRow=\(i_selectedRow)")
+        //self.performSegue(withIdentifier: "changeScreen", sender: nil)
+        self.performSegue(withIdentifier: "gotoTabBar", sender: nil)
+        
+        
     }
     
 //    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
@@ -177,15 +180,31 @@ class TableViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        /*
         if segue.identifier == "changeScreen" {
             let vc = segue.destination as! ViewController
-//            vc.txt_title = "This is Row at \(i_selectedRow+1)"
-//            vc.txt_detail = "This is Detail at Row \(i_selectedRow+1)"
+    
+            vc.txt_title = "This is Row at \(i_selectedRow+1)"
+            vc.txt_detail = "This is Detail at Row \(i_selectedRow+1)"
             
             vc.txt_title = dataArray[i_selectedRow]["A_Name_Ch"] as! String
             vc.txt_detail = dataArray[i_selectedRow]["A_Location"] as! String
             vc.str_imgUrl = dataArray[i_selectedRow]["A_Pic01_URL"] as! String
 
         }
+       */
+        
+        if(segue.identifier == "gotoTabBar"){
+        
+            let tabvc = segue.destination as! TabBarViewController
+            let vc = tabvc.viewControllers!.first as! ViewController
+        
+            vc.txt_title = dataArray[i_selectedRow]["A_Name_Ch"] as! String
+            vc.txt_detail = dataArray[i_selectedRow]["A_Location"] as! String
+            vc.str_imgUrl = dataArray[i_selectedRow]["A_Pic01_URL"] as! String
+            
+            debugPrint("i_selectedRow=\(i_selectedRow) txt_title=\(vc.txt_title)")
+        }
+        
     }
 }
