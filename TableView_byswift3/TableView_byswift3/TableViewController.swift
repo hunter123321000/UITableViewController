@@ -106,11 +106,11 @@ class TableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         i_selectedRow = indexPath.row
         let currentCell = tableView.cellForRow(at: indexPath)! as UITableViewCell
-        debugPrint("cell.tag=\(currentCell.tag) \n i_selectedRow=\(i_selectedRow)")
+        debugPrint("+++++cell.tag=\(currentCell.tag)   i_selectedRow=\(i_selectedRow)")
         //self.performSegue(withIdentifier: "changeScreen", sender: nil)
         self.performSegue(withIdentifier: "gotoTabBar", sender: nil)
         
-        
+        tableView.deselectRow(at: indexPath, animated: false)
     }
     
 //    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
@@ -194,6 +194,7 @@ class TableViewController: UITableViewController {
         }
        */
         
+         debugPrint("~~~~~ i_selectedRow=\(i_selectedRow)")
         if(segue.identifier == "gotoTabBar"){
         
             let tabvc = segue.destination as! TabBarViewController
@@ -203,8 +204,7 @@ class TableViewController: UITableViewController {
             vc.txt_detail = dataArray[i_selectedRow]["A_Location"] as! String
             vc.str_imgUrl = dataArray[i_selectedRow]["A_Pic01_URL"] as! String
             
-            debugPrint("i_selectedRow=\(i_selectedRow) txt_title=\(vc.txt_title)")
         }
-        
     }
+ 
 }

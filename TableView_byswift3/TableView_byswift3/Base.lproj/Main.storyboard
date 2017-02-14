@@ -69,7 +69,6 @@
                                     <outlet property="img_icon" destination="jMs-6i-4Y8" id="L9f-rn-vcv"/>
                                     <outlet property="lb_detail" destination="QdJ-gv-wkR" id="r1A-JA-pOz"/>
                                     <outlet property="lb_title" destination="zQ3-qG-Xah" id="w3J-b9-eKp"/>
-                                    <segue destination="GV4-6f-cbk" kind="show" id="w4G-IO-ej7"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -79,6 +78,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Root View Controller" id="Bxq-Ow-P9h"/>
+                    <connections>
+                        <segue destination="GV4-6f-cbk" kind="show" identifier="gotoTabBar" id="DhL-nk-43P"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hxZ-5S-Fqf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -100,7 +102,7 @@
             </objects>
             <point key="canvasLocation" x="-1134" y="189"/>
         </scene>
-        <!--View Controller-->
+        <!--Item-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TableView_byswift3" customModuleProvider="target" sceneMemberID="viewController">
@@ -144,6 +146,7 @@
                             <constraint firstItem="4H0-ZG-tTp" firstAttribute="centerX" secondItem="bnD-f9-kmw" secondAttribute="centerX" id="xQJ-EM-VIX"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="HVY-fu-Mhb"/>
                     <connections>
                         <outlet property="img_animal" destination="4H0-ZG-tTp" id="QgO-4Z-B4v"/>
                         <outlet property="lb_detail" destination="wXl-rl-A2u" id="EbK-2M-R9S"/>
@@ -152,7 +155,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1044" y="239.73013493253376"/>
+            <point key="canvasLocation" x="694" y="188"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="7Ic-iP-IQT">
@@ -171,7 +174,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EaM-Sd-XR7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1090" y="1688"/>
+            <point key="canvasLocation" x="694" y="1619"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="YF4-3J-QON">
@@ -185,20 +188,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J64-DC-Pjg">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J64-DC-Pjg">
                                 <rect key="frame" x="162" y="227" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xDC-5A-4qp">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xDC-5A-4qp">
                                 <rect key="frame" x="162" y="282" width="42" height="44"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="P4l-HL-bru">
-                                <rect key="frame" x="-4" y="-2" width="375" height="198"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="P4l-HL-bru">
+                                <rect key="frame" x="-4" y="64" width="375" height="132"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="198" id="mXU-zK-dh3"/>
                                 </constraints>
@@ -208,21 +211,24 @@
                         <constraints>
                             <constraint firstItem="P4l-HL-bru" firstAttribute="centerX" secondItem="xDC-5A-4qp" secondAttribute="centerX" id="7cW-hN-VZK"/>
                             <constraint firstItem="xDC-5A-4qp" firstAttribute="top" secondItem="J64-DC-Pjg" secondAttribute="bottom" constant="34" id="Bpy-Tt-z7g"/>
+                            <constraint firstItem="P4l-HL-bru" firstAttribute="leading" secondItem="uoT-ro-e4N" secondAttribute="leading" id="Xmt-D1-V4e"/>
                             <constraint firstItem="P4l-HL-bru" firstAttribute="centerX" secondItem="J64-DC-Pjg" secondAttribute="centerX" id="cdM-ZU-qkv"/>
+                            <constraint firstItem="P4l-HL-bru" firstAttribute="top" secondItem="orD-pI-z04" secondAttribute="bottom" constant="59" id="eF4-Jj-K2s"/>
+                            <constraint firstAttribute="trailing" secondItem="P4l-HL-bru" secondAttribute="trailing" id="k4t-2s-YUd"/>
                             <constraint firstItem="J64-DC-Pjg" firstAttribute="top" secondItem="P4l-HL-bru" secondAttribute="bottom" constant="31" id="pe6-n8-O2T"/>
                             <constraint firstItem="J64-DC-Pjg" firstAttribute="top" secondItem="P4l-HL-bru" secondAttribute="bottom" constant="31" id="wPd-ub-3MQ"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="bookmarks" id="6cU-5B-6KO"/>
                     <connections>
-                        <outlet property="img_animal" destination="P4l-HL-bru" id="hZA-BY-qkS"/>
-                        <outlet property="lb_detail" destination="xDC-5A-4qp" id="Jda-Xo-0xM"/>
-                        <outlet property="lb_title" destination="J64-DC-Pjg" id="BB5-2J-x6k"/>
+                        <outlet property="img_animal" destination="P4l-HL-bru" id="fkP-Hv-FyA"/>
+                        <outlet property="lb_detail" destination="xDC-5A-4qp" id="CJO-Tc-MEY"/>
+                        <outlet property="lb_title" destination="J64-DC-Pjg" id="MIl-Re-Tx3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lh7-M2-hzf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1073" y="930"/>
+            <point key="canvasLocation" x="693.60000000000002" y="900.89955022488766"/>
         </scene>
         <!--Tab Bar View Controller-->
         <scene sceneID="cB6-wD-cMR">
@@ -241,7 +247,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u8Z-bO-TNk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-207" y="967"/>
+            <point key="canvasLocation" x="-207" y="901"/>
         </scene>
     </scenes>
 </document>
