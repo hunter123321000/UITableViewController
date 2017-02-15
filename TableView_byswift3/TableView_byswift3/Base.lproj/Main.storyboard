@@ -23,7 +23,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="57"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="6Hf-V8-xjw" id="dlj-fc-Abw">
-                                    <rect key="frame" x="0.0" y="0.0" width="342" height="56"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="342" height="57"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zQ3-qG-Xah" customClass="PaddingLabel" customModule="TableView_byswift3" customModuleProvider="target">
@@ -201,7 +201,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="P4l-HL-bru">
-                                <rect key="frame" x="-4" y="64" width="375" height="132"/>
+                                <rect key="frame" x="-4" y="78" width="375" height="132"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="198" id="mXU-zK-dh3"/>
                                 </constraints>
@@ -213,7 +213,7 @@
                             <constraint firstItem="xDC-5A-4qp" firstAttribute="top" secondItem="J64-DC-Pjg" secondAttribute="bottom" constant="34" id="Bpy-Tt-z7g"/>
                             <constraint firstItem="P4l-HL-bru" firstAttribute="leading" secondItem="uoT-ro-e4N" secondAttribute="leading" id="Xmt-D1-V4e"/>
                             <constraint firstItem="P4l-HL-bru" firstAttribute="centerX" secondItem="J64-DC-Pjg" secondAttribute="centerX" id="cdM-ZU-qkv"/>
-                            <constraint firstItem="P4l-HL-bru" firstAttribute="top" secondItem="orD-pI-z04" secondAttribute="bottom" constant="59" id="eF4-Jj-K2s"/>
+                            <constraint firstItem="P4l-HL-bru" firstAttribute="top" secondItem="orD-pI-z04" secondAttribute="bottom" id="eF4-Jj-K2s"/>
                             <constraint firstAttribute="trailing" secondItem="P4l-HL-bru" secondAttribute="trailing" id="k4t-2s-YUd"/>
                             <constraint firstItem="J64-DC-Pjg" firstAttribute="top" secondItem="P4l-HL-bru" secondAttribute="bottom" constant="31" id="pe6-n8-O2T"/>
                             <constraint firstItem="J64-DC-Pjg" firstAttribute="top" secondItem="P4l-HL-bru" secondAttribute="bottom" constant="31" id="wPd-ub-3MQ"/>
