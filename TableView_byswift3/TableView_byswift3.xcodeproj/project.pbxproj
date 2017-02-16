@@ -20,6 +20,7 @@
 		47A9C5121E30829E001539A6 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A9C5111E30829E001539A6 /* TableViewController.swift */; };
 		47B6BCAD1E383623001844F8 /* SwiftSpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B6BCAC1E383623001844F8 /* SwiftSpinner.swift */; };
 		47D70B431E52E55600612384 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47D70B411E52E55600612384 /* Main.storyboard */; };
+		6978CB1C1C04052479BEDADE /* Pods_TableView_byswift3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BB1AB63A599C467A8FE5535 /* Pods_TableView_byswift3.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -38,6 +39,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2BB1AB63A599C467A8FE5535 /* Pods_TableView_byswift3.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TableView_byswift3.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		470813E71E37034100F38AF6 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		47512AF01E4DAC4500D58A0D /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		4756F0621E3736A300EB4D5E /* PaddingLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaddingLabel.swift; sourceTree = "<group>"; };
@@ -51,6 +53,8 @@
 		47A9C5111E30829E001539A6 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		47B6BCAC1E383623001844F8 /* SwiftSpinner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftSpinner.swift; sourceTree = "<group>"; };
 		47D70B421E52E55600612384 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = TableView_byswift3/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		67C099C5140AA6FDA5C21BCB /* Pods-TableView_byswift3.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TableView_byswift3.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TableView_byswift3/Pods-TableView_byswift3.debug.xcconfig"; sourceTree = "<group>"; };
+		AD92F7082D28B907B7230225 /* Pods-TableView_byswift3.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TableView_byswift3.release.xcconfig"; path = "Pods/Target Support Files/Pods-TableView_byswift3/Pods-TableView_byswift3.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,7 @@
 			files = (
 				470813E81E37034100F38AF6 /* Alamofire.framework in Frameworks */,
 				4756F0651E3741AD00EB4D5E /* AlamofireImage.framework in Frameworks */,
+				6978CB1C1C04052479BEDADE /* Pods_TableView_byswift3.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,6 +87,8 @@
 				470813E71E37034100F38AF6 /* Alamofire.framework */,
 				47A9C4FE1E3081F8001539A6 /* TableView_byswift3 */,
 				47A9C4FD1E3081F8001539A6 /* Products */,
+				AAF6C85E30CC12A645E9113D /* Pods */,
+				7EDBE32389ED2566212687E6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -109,6 +116,23 @@
 			path = TableView_byswift3;
 			sourceTree = "<group>";
 		};
+		7EDBE32389ED2566212687E6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2BB1AB63A599C467A8FE5535 /* Pods_TableView_byswift3.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AAF6C85E30CC12A645E9113D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				67C099C5140AA6FDA5C21BCB /* Pods-TableView_byswift3.debug.xcconfig */,
+				AD92F7082D28B907B7230225 /* Pods-TableView_byswift3.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -116,10 +140,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 47A9C50E1E3081F8001539A6 /* Build configuration list for PBXNativeTarget "TableView_byswift3" */;
 			buildPhases = (
+				A8D43786917E9A96A1ACB4A9 /* [CP] Check Pods Manifest.lock */,
 				47A9C4F81E3081F8001539A6 /* Sources */,
 				47A9C4F91E3081F8001539A6 /* Frameworks */,
 				47A9C4FA1E3081F8001539A6 /* Resources */,
 				470813EA1E37034100F38AF6 /* Embed Frameworks */,
+				C3B31DB4F3E0A0992DF96F99 /* [CP] Embed Pods Frameworks */,
+				DA328A2203835A4A7FAB5EC3 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -177,6 +204,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A8D43786917E9A96A1ACB4A9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C3B31DB4F3E0A0992DF96F99 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TableView_byswift3/Pods-TableView_byswift3-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DA328A2203835A4A7FAB5EC3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TableView_byswift3/Pods-TableView_byswift3-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		47A9C4F81E3081F8001539A6 /* Sources */ = {
@@ -308,6 +383,7 @@
 		};
 		47A9C50F1E3081F8001539A6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 67C099C5140AA6FDA5C21BCB /* Pods-TableView_byswift3.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = QPH3LHSFD4;
@@ -325,6 +401,7 @@
 		};
 		47A9C5101E3081F8001539A6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AD92F7082D28B907B7230225 /* Pods-TableView_byswift3.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = QPH3LHSFD4;
