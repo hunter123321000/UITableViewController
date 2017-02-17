@@ -4,7 +4,11 @@ demo UITableViewController by Swift 3
 https://www.youtube.com/watch?v=kO7xcC5eVt8
 
 #Demo API Access through Zoo by Alamofire
-![](http://i.imgur.com/3JURSmp.png)
+![](http://imgur.com/jsZqUXg)
 
-Content
-![](http://i.imgur.com/etxnJwJ.jpg)
+Content with different Color in SubString
+![](http://imgur.com/iarSnuY)
+
+Switch DisPlay with DisplaySwitcher
+![](http://imgur.com/SdnECRq)
+![](http://imgur.com/FrgEWtL)
