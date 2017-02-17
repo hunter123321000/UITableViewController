@@ -8,7 +8,6 @@
 
 import UIKit
 import Alamofire
-import DisplaySwitcher
 
 class TableViewCell:UITableViewCell{
     
@@ -202,10 +201,15 @@ class TableViewController: UITableViewController {
         
             let tabvc = segue.destination as! TabBarViewController
             let vc = tabvc.viewControllers!.first as! ViewController
+            let vc2 = tabvc.viewControllers?.last as! changeDisplayView
         
             vc.txt_title = dataArray[i_selectedRow]["A_Name_Ch"] as! String
             vc.txt_detail = dataArray[i_selectedRow]["A_Location"] as! String
             vc.str_imgUrl = dataArray[i_selectedRow]["A_Pic01_URL"] as! String
+            
+            for i in dataArray{
+                vc2.str_imgUrl.append(i["A_Pic01_URL"] as! String)
+            }
             
         }
     }

@@ -23,7 +23,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="57"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="6Hf-V8-xjw" id="dlj-fc-Abw">
-                                    <rect key="frame" x="0.0" y="0.0" width="342" height="57"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="342" height="56"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zQ3-qG-Xah" customClass="PaddingLabel" customModule="TableView_byswift3" customModuleProvider="target">
@@ -157,10 +157,10 @@
             </objects>
             <point key="canvasLocation" x="694" y="188"/>
         </scene>
-        <!--View Controller-->
+        <!--Change Display View-->
         <scene sceneID="7Ic-iP-IQT">
             <objects>
-                <viewController id="yWD-P4-bwM" sceneMemberID="viewController">
+                <viewController id="yWD-P4-bwM" customClass="changeDisplayView" customModule="TableView_byswift3" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="XxO-Z2-MrC"/>
                         <viewControllerLayoutGuide type="bottom" id="qTy-4R-h44"/>
@@ -168,13 +168,45 @@
                     <view key="view" contentMode="scaleToFill" id="KI6-YK-3DA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gbL-1c-8Ki" customClass="SwitchLayoutButton" customModule="DisplaySwitcher">
+                                <rect key="frame" x="313" y="66" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="TabSwitchButton:" destination="yWD-P4-bwM" eventType="touchUpInside" id="UKF-sN-i3h"/>
+                                </connections>
+                            </button>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="t5J-KI-GKt">
+                                <rect key="frame" x="16" y="104" width="343" height="479"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="pD4-do-TMP">
+                                    <size key="itemSize" width="147" height="115"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="t5J-KI-GKt" firstAttribute="leading" secondItem="KI6-YK-3DA" secondAttribute="leadingMargin" id="NRB-VO-4M8"/>
+                            <constraint firstItem="qTy-4R-h44" firstAttribute="top" secondItem="t5J-KI-GKt" secondAttribute="bottom" constant="40" id="fuu-nS-Ydo"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="t5J-KI-GKt" secondAttribute="trailing" id="sLp-Fg-bvf"/>
+                            <constraint firstItem="t5J-KI-GKt" firstAttribute="top" secondItem="XxO-Z2-MrC" secondAttribute="bottom" constant="40" id="yGm-is-tg8"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" tag="1" systemItem="history" id="k94-HG-IH8"/>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="collectionView" destination="t5J-KI-GKt" id="Xtz-lN-CPl"/>
+                        <outlet property="switchButton" destination="gbL-1c-8Ki" id="YvC-6l-XAP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EaM-Sd-XR7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="694" y="1619"/>
+            <point key="canvasLocation" x="693.60000000000002" y="1667.3163418290856"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="YF4-3J-QON">
@@ -200,8 +232,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="P4l-HL-bru">
-                                <rect key="frame" x="-4" y="78" width="375" height="132"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="P4l-HL-bru">
+                                <rect key="frame" x="0.0" y="64" width="375" height="198"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="198" id="mXU-zK-dh3"/>
                                 </constraints>

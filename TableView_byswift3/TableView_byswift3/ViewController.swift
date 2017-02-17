@@ -21,9 +21,6 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         SwiftSpinner.show("Fetching Data...")
         
-        
-        
-        
         lb_title.attributedText = convertSubStringColor(input: txt_title)
         lb_detail.text = txt_detail
         // Do any additional setup after loading the view, typically from a nib.
