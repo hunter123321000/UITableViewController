@@ -51,11 +51,37 @@ class TableViewController: UITableViewController {
             }
         }
         
+        self.setEditing(true, animated: false)
+        self.editButtonAction()
+        
     }
     func refreshAction(){
         
         i_rows = i_rows + 10
         self.tableView.reloadData()
+    }
+    
+    func editButtonAction (){
+        self.setEditing(
+            !self.isEditing, animated: true)
+        if (!self.isEditing) {
+            // 顯示編輯按鈕
+            self.navigationItem.leftBarButtonItem =
+                UIBarButtonItem(barButtonSystemItem: .edit,
+                                target: self,
+                                action:
+                    #selector(self.editButtonAction))
+        } else {
+            // 顯示編輯完成按鈕
+            self.navigationItem.leftBarButtonItem =
+                UIBarButtonItem(barButtonSystemItem: .done,
+                                target: self,
+                                action:
+                    #selector(self.editButtonAction))
+            
+            // 隱藏新增按鈕
+            self.navigationItem.rightBarButtonItem = nil
+        }
     }
 
     override func didReceiveMemoryWarning() {

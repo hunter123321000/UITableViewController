@@ -43,9 +43,10 @@ class ViewController: UIViewController {
                 }
         }
         
-        
-    
-     
+        // add lb_detail action to goto"demoLiftCycle"
+        let lb_tap = UITapGestureRecognizer(target: self, action: #selector(ViewController.lb_clcik))
+        lb_detail.isUserInteractionEnabled = true
+        lb_detail.addGestureRecognizer(lb_tap)
         
     }
 
@@ -54,6 +55,14 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    func lb_clcik(sender: UITapGestureRecognizer){
+        debugPrint("lb_clcik")
+        let targetView = demoLifeCycle()
+        present(targetView, animated: true) { () -> Void in
+            debugPrint("demoLifeCycle")
+        }
+    }
+    
     func convertSubStringColor(input:String) -> NSMutableAttributedString {
         let color : [UIColor] = [.green, .blue, .red, .orange]
         let str = NSMutableAttributedString(string: input)
