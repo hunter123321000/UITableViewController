@@ -18,13 +18,14 @@
 		479E0A401E56A9CE002995F5 /* ListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479E0A3E1E56A9CE002995F5 /* ListCell.swift */; };
 		479E0A411E56A9CE002995F5 /* ListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 479E0A3F1E56A9CE002995F5 /* ListCell.xib */; };
 		47A9C5001E3081F8001539A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A9C4FF1E3081F8001539A6 /* AppDelegate.swift */; };
-		47A9C5021E3081F8001539A6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A9C5011E3081F8001539A6 /* ViewController.swift */; };
+		47A9C5021E3081F8001539A6 /* detailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A9C5011E3081F8001539A6 /* detailController.swift */; };
 		47A9C5071E3081F8001539A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47A9C5061E3081F8001539A6 /* Assets.xcassets */; };
 		47A9C50A1E3081F8001539A6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47A9C5081E3081F8001539A6 /* LaunchScreen.storyboard */; };
 		47A9C5121E30829E001539A6 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A9C5111E30829E001539A6 /* TableViewController.swift */; };
 		47B6BCAD1E383623001844F8 /* SwiftSpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B6BCAC1E383623001844F8 /* SwiftSpinner.swift */; };
 		47B886151E5847BA0086DE0B /* demoLifyCycle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B886141E5847BA0086DE0B /* demoLifyCycle.swift */; };
 		47C052D31E55AD2B00E90AED /* changeDisplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47C052D21E55AD2B00E90AED /* changeDisplayView.swift */; };
+		47D0F6321E5A9DB6001201AA /* BorderedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D0F6311E5A9DB6001201AA /* BorderedButton.swift */; };
 		47D70B431E52E55600612384 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47D70B411E52E55600612384 /* Main.storyboard */; };
 		6978CB1C1C04052479BEDADE /* Pods_TableView_byswift3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BB1AB63A599C467A8FE5535 /* Pods_TableView_byswift3.framework */; };
 /* End PBXBuildFile section */
@@ -56,7 +57,7 @@
 		479E0A3F1E56A9CE002995F5 /* ListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListCell.xib; sourceTree = "<group>"; };
 		47A9C4FC1E3081F8001539A6 /* TableView_byswift3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TableView_byswift3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		47A9C4FF1E3081F8001539A6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		47A9C5011E3081F8001539A6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		47A9C5011E3081F8001539A6 /* detailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = detailController.swift; sourceTree = "<group>"; };
 		47A9C5061E3081F8001539A6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		47A9C5091E3081F8001539A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		47A9C50B1E3081F8001539A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -64,6 +65,7 @@
 		47B6BCAC1E383623001844F8 /* SwiftSpinner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftSpinner.swift; sourceTree = "<group>"; };
 		47B886141E5847BA0086DE0B /* demoLifyCycle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = demoLifyCycle.swift; sourceTree = "<group>"; };
 		47C052D21E55AD2B00E90AED /* changeDisplayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = changeDisplayView.swift; sourceTree = "<group>"; };
+		47D0F6311E5A9DB6001201AA /* BorderedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BorderedButton.swift; path = ../../../MyCalculator/MyCalculator/MyCalculator/BorderedButton.swift; sourceTree = "<group>"; };
 		47D70B421E52E55600612384 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = TableView_byswift3/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		67C099C5140AA6FDA5C21BCB /* Pods-TableView_byswift3.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TableView_byswift3.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TableView_byswift3/Pods-TableView_byswift3.debug.xcconfig"; sourceTree = "<group>"; };
 		AD92F7082D28B907B7230225 /* Pods-TableView_byswift3.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TableView_byswift3.release.xcconfig"; path = "Pods/Target Support Files/Pods-TableView_byswift3/Pods-TableView_byswift3.release.xcconfig"; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 			children = (
 				4756F0621E3736A300EB4D5E /* PaddingLabel.swift */,
 				47B6BCAC1E383623001844F8 /* SwiftSpinner.swift */,
+				47D0F6311E5A9DB6001201AA /* BorderedButton.swift */,
 			);
 			name = CustomObj;
 			sourceTree = "<group>";
@@ -116,7 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				47A9C4FF1E3081F8001539A6 /* AppDelegate.swift */,
-				47A9C5011E3081F8001539A6 /* ViewController.swift */,
+				47A9C5011E3081F8001539A6 /* detailController.swift */,
 				47512AF01E4DAC4500D58A0D /* TabBarViewController.swift */,
 				47A9C5111E30829E001539A6 /* TableViewController.swift */,
 				47C052D21E55AD2B00E90AED /* changeDisplayView.swift */,
@@ -281,9 +284,10 @@
 				47B6BCAD1E383623001844F8 /* SwiftSpinner.swift in Sources */,
 				47C052D31E55AD2B00E90AED /* changeDisplayView.swift in Sources */,
 				4756F0631E3736A300EB4D5E /* PaddingLabel.swift in Sources */,
-				47A9C5021E3081F8001539A6 /* ViewController.swift in Sources */,
+				47A9C5021E3081F8001539A6 /* detailController.swift in Sources */,
 				47A9C5121E30829E001539A6 /* TableViewController.swift in Sources */,
 				47B886151E5847BA0086DE0B /* demoLifyCycle.swift in Sources */,
+				47D0F6321E5A9DB6001201AA /* BorderedButton.swift in Sources */,
 				4703611A1E56AA6E009BC23E /* GridCell.swift in Sources */,
 				479E0A401E56A9CE002995F5 /* ListCell.swift in Sources */,
 				47512AF11E4DAC4500D58A0D /* TabBarViewController.swift in Sources */,
@@ -354,7 +358,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -397,7 +401,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -416,7 +420,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = TableView_byswift3/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.momo.hunterchen.TableView-byswift3";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -435,7 +439,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = TableView_byswift3/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.momo.hunterchen.TableView-byswift3";
 				PRODUCT_NAME = "$(TARGET_NAME)";

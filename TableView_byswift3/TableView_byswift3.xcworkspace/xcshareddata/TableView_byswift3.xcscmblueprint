@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "EB63A93468F9C705D3825C17AA35F68120E54192",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "EB63A93468F9C705D3825C17AA35F68120E54192" : 9223372036854775807,
+    "3713CFB450461D670B14F0BAE45D7D53A0B2B88A" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "9BAFCB2D-F580-4B59-8230-8CCA6571EF7E",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "EB63A93468F9C705D3825C17AA35F68120E54192" : "Swift3_TableView\/",
+    "3713CFB450461D670B14F0BAE45D7D53A0B2B88A" : "MyCalculator\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "TableView_byswift3",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "TableView_byswift3\/TableView_byswift3.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/hunter123321000\/myCalcultor.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "3713CFB450461D670B14F0BAE45D7D53A0B2B88A"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/hunter123321000\/UITableViewController.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "EB63A93468F9C705D3825C17AA35F68120E54192"
+    }
+  ]
+}

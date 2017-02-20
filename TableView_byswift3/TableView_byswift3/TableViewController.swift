@@ -226,7 +226,7 @@ class TableViewController: UITableViewController {
         if(segue.identifier == "gotoTabBar"){
         
             let tabvc = segue.destination as! TabBarViewController
-            let vc = tabvc.viewControllers!.first as! ViewController
+            let vc = tabvc.viewControllers!.first as! detailController
             let vc2 = tabvc.viewControllers?.last as! changeDisplayView
         
             vc.txt_title = dataArray[i_selectedRow]["A_Name_Ch"] as! String

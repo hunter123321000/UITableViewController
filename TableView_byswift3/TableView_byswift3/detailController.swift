@@ -10,7 +10,7 @@ import UIKit
 import Alamofire
 import AlamofireImage
 
-class ViewController: UIViewController {
+class detailController: UIViewController {
 
     @IBOutlet weak var lb_title: UILabel!
     var txt_title = "", txt_detail="",str_imgUrl=""
@@ -44,7 +44,7 @@ class ViewController: UIViewController {
         }
         
         // add lb_detail action to goto"demoLiftCycle"
-        let lb_tap = UITapGestureRecognizer(target: self, action: #selector(ViewController.lb_clcik))
+        let lb_tap = UITapGestureRecognizer(target: self, action: #selector(detailController.lb_clcik))
         lb_detail.isUserInteractionEnabled = true
         lb_detail.addGestureRecognizer(lb_tap)
         
@@ -57,10 +57,9 @@ class ViewController: UIViewController {
 
     func lb_clcik(sender: UITapGestureRecognizer){
         debugPrint("lb_clcik")
-        let targetView = demoLifeCycle()
-        present(targetView, animated: true) { () -> Void in
-            debugPrint("demoLifeCycle")
-        }
+        
+        let targetView = self.storyboard?.instantiateViewController(withIdentifier: "demoLifeCycleVC") as! demoLifeCycle
+        self.present(targetView, animated: true, completion: nil)
     }
     
     func convertSubStringColor(input:String) -> NSMutableAttributedString {
